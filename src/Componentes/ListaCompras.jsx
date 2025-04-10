@@ -15,9 +15,26 @@ export default function ListaCompras(){
         }
     }
 
-    function eliminarItem(){
-
+    function eliminarItem(index){
+        const actualizarLista = item.filter((_, i) => i !== index);
+        setItem (actualizarLista);
     }
+
+    function sumar(index) {
+        const nuevaLista = item.map((item, i) =>
+            i === index ? { ...item, cantidad: item.cantidad + 1 } : item 
+     );
+        setItem(nuevaLista);
+    }
+
+    function restar(index) {
+        const nuevaLista = item.map((item, i) =>
+            i === index && item.cantidad > 1
+        ? { ...item, cantidad: item.cantidad - 1 } : item 
+     );
+        setItem(nuevaLista);
+    }
+
     return(
     <div className="Lista">
         <div>
@@ -35,7 +52,11 @@ export default function ListaCompras(){
         <ol>
             {item.map((item, index) =>
                 <li key={index}> 
-                    <span className="text"> {item.nombre} {item.cantidad} </span>
+                    <span className="text"> 
+                        {item.nombre} {item.cantidad} 
+                    </span>
+                    <button onClick={() => sumar(index)}>+</button>
+                    <button onClick={() => restar(index)}>-</button>
                     <button 
                         className="btn-eliminar"
                         onClick={() => eliminarItem(index)}>
