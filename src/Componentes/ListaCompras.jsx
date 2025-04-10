@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Item from "./Item";
+import Formulario from "./Formulario";
 
 export default function ListaCompras(){
     const [item, setItem] = useState([]);
@@ -36,37 +38,24 @@ export default function ListaCompras(){
     }
 
     return(
-    <div className="Lista">
         <div>
-            <input
-                type="text" 
-                value={nuevo} 
-                onChange={cambio}/>
-            <button 
-                className="btn-agregar" 
-                onClick={agregarItem}>
-                Agregar
-            </button>
+            <Formulario
+                nuevo = {nuevo}
+                cambio = {cambio}
+                agregarItem={agregarItem}
+            />
+            <ol>
+                {item.map((item, index) =>
+                    <Item
+                    key = {index}
+                    item = {item}
+                    index = {index}
+                    sumar = {sumar}
+                    restar = {restar}
+                    eliminarItem = {eliminarItem}
+                    />
+                )}
+            </ol>
         </div>
-
-        <ol>
-            {item.map((item, index) =>
-                <li key={index}> 
-                    <span className="text"> 
-                        {item.nombre} {item.cantidad} 
-                    </span>
-                    <button onClick={() => sumar(index)}>+</button>
-                    <button onClick={() => restar(index)}>-</button>
-                    <button 
-                        className="btn-eliminar"
-                        onClick={() => eliminarItem(index)}>
-                        <i class="bi bi-trash"></i>
-                    </button>
-                </li>
-            )}
-        </ol>
-    </div>
-    
-
 );
 }
