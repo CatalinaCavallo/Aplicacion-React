@@ -1,3 +1,4 @@
+import '../App.css'
 export default function Formulario({ nuevo, cambio, agregarItem}){
     return (
         <div className="Formulario">
@@ -8,7 +9,9 @@ export default function Formulario({ nuevo, cambio, agregarItem}){
                 onChange={cambio}/>
             <button 
                 className="btn-agregar" 
-                onClick={agregarItem}>
+                onClick={agregarItem}
+                disabled={nuevo.trim() === ""} 
+            >
                 Agregar
             </button>
         </div>

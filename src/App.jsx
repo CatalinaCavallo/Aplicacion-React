@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <main className='Fondo'>
-          <h1> <i class="bi bi-bag-heart-fill"></i> Mi lista de compras</h1>
+          <h1>  Mi lista de compras</h1>
       <ListaCompras />
       </main>
     </>

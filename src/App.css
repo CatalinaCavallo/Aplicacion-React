@@ -1,42 +1,89 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+
+}
+
+
+body{
+  background-color:rgb(217, 146, 160);
+}
+
+main{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 20px;
+  margin: 100px auto 60px auto;
+  width: 80%;
+  max-width: 1000px;
+  height: 100%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.304);
+  border-radius: 20px;
+}
+
+h1{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:rgb(176, 48, 82);
+  padding-top: 20px;
   text-align: center;
+  text-shadow: 10px 10px 20px rgba(69, 69, 69, 0.3);
+  font-size: 35px;
+  font-weight:500;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.Formulario{
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+  display: flex;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Formulario button{
+  height: 50px;
+  border: 5px;
+  width: 100px;
+  background-color:rgb(176, 48, 82);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: aliceblue;
+  box-shadow: 10px 10px 20px rgba(174, 174, 174, 0.3);
+  font-size: 20px;
+  border: 1px;
+  font-weight: 300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.Formulario input{
+  background-color:rgb(220, 177, 186);
+  box-shadow: 10px 10px 20px rgba(174, 174, 174, 0.3);
+  height: 50px;
+  width: 250px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: 1px;
 }
 
-.card {
-  padding: 2em;
+.Item{
+  display: flex;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:aliceblue;
+  font-size: 22px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: rgb(221, 122, 142);
+  border-radius: 10px;
+  justify-content: space-between;
+  box-shadow: 10px 10px 20px rgba(174, 174, 174, 0.3);
+  text-shadow: 10px 10px 20px rgba(69, 68, 68, 0.3);
+  text-transform: uppercase;
 }
 
-.read-the-docs {
-  color: #888;
+.Item button{
+  height: 30px;
+  border: 5px;
+  width: 30px;
+  color: rgb(176, 48, 82);
+  border-radius: 50px;
 }
