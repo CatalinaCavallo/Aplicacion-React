@@ -33,9 +33,13 @@ export default function Item({ item, index, sumar, restar, eliminarItem, actuali
             ) : (
                 <>
                     <span>{item.nombre}</span>
-                    <button onClick={() => sumar(index)}>+</button>
+                    <button onClick={() => sumar(index)}>
+                        +
+                    </button>
                     {item.cantidad}
-                    <button onClick={() => restar(index)}>-</button>
+                    <button onClick={() => restar(index)}>
+                        -
+                    </button>
                     <button onClick={() => eliminarItem(index)}>
                         <i className="bi bi-trash"></i>
                     </button>

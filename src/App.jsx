@@ -6,8 +6,8 @@ function App() {
   return (
     <>
       <main>
-          <h1>  Mi lista de compras</h1>
-      <ListaCompras />
+        <h1>  Mi lista de compras</h1>
+        <ListaCompras />
       </main>
     </>
   )
