@@ -36,10 +36,22 @@ h1{
   font-weight:500;
 }
 
+h2{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:rgb(201, 90, 120);
+  text-align: center;
+  text-shadow: 10px 10px 20px rgba(69, 69, 69, 0.3);
+  font-size: 15px;
+  font-weight:700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
 .Formulario{
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 20px;
+  padding-top: 10px;
   display: flex;
+  flex-direction: column;
 }
 
 .Formulario button{
@@ -51,7 +63,7 @@ h1{
   color: aliceblue;
   box-shadow: 10px 10px 20px rgba(174, 174, 174, 0.3);
   font-size: 20px;
-  border: 1px;
+  border: none;
   font-weight: 300;
 }
 
@@ -59,10 +71,18 @@ h1{
   background-color:rgb(220, 177, 186);
   box-shadow: 10px 10px 20px rgba(174, 174, 174, 0.3);
   height: 50px;
-  width: 250px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   border: 1px;
+  margin-right: 5px;
+}
+
+.FormCantidad{
+  width: 110px;
+}
+
+.FormProducto{
+  width: 190px;
 }
 
 .Item{
@@ -80,9 +100,40 @@ h1{
   text-transform: uppercase;
 }
 
-.Item button{
+.FormEditar{
+  display: flex;
+
+}
+
+.FormEditar input{
+  background-color:rgb(220, 177, 186);
+  box-shadow: 10px 10px 20px rgba(174, 174, 174, 0.3);
+  height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: 1px;
+  margin-right: 5px;
+  color: rgb(109, 109, 109);
+}
+
+.FormEditar button{
   height: 30px;
   border: 5px;
+  width: 100px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-shadow: 10px 10px 20px rgba(174, 174, 174, 0.3);
+  font-size: 20px;
+  border: none;
+  font-weight: 300;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  
+}
+
+.Item button{
+  height: 30px;
+  border: none;
   width: 30px;
   color: rgb(176, 48, 82);
   border-radius: 50px;

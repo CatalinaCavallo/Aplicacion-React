@@ -5,7 +5,7 @@ import ListaCompras from './Componentes/ListaCompras';
 function App() {
   return (
     <>
-      <main className='Fondo'>
+      <main>
           <h1>  Mi lista de compras</h1>
       <ListaCompras />
       </main>
